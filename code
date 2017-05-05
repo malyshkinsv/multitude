@@ -1,0 +1,28 @@
+program Project1;
+{$APPTYPE CONSOLE}
+uses
+  SysUtils;
+Type mnoj=set of Char;
+   var mnoj1,mnoj2,mnoj3:mnoj;
+   st1,st3:string; st2:Char;
+   p,i:Integer;
+   s:Char;
+begin
+  { TODO -oUser -cConsole Main : Insert code here }
+  Writeln('Vvedi stroky');
+  Readln(st1);
+  //mnoj1:=['а','е','и','о','у','ы','э','ю','я'];
+  mnoj1:=['a','e','i','o','u'];
+  p:=Length(st1); //нашли длину строки
+  //Writeln(st1);Writeln;
+  mnoj2:=[];
+  for i:=1 to p do
+   begin
+   st2:=st1[i];
+   mnoj2:=mnoj2+[st1[i]];
+   end;
+   mnoj3:=mnoj2*mnoj1;
+   for s:='a' to 'z' do
+    if (s in mnoj3) then write (s+' ');
+    readln;
+end.
